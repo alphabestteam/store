@@ -1,0 +1,10 @@
+<section>
+  <mat-card>
+    <mat-card-title>Your To-Do List</mat-card-title>
+    <mat-card-subtitle>Click on an item to delete it</mat-card-subtitle>
+    <app-list
+      [listItems]="listItems | async"
+      (deleteItemEmt)="deleteItem($event)"
+    ></app-list>
+  </mat-card>
+</section>

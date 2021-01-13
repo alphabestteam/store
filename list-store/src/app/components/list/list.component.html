@@ -1,0 +1,11 @@
+<mat-list>
+  <mat-list-item
+    *ngFor="let item of listItems; index as i"
+    (click)="deleteItem(item)"
+  >
+    {{ item }}
+  </mat-list-item>
+  <button mat-button color="primary" (click)="back()">
+    Insert new
+  </button>
+</mat-list>
