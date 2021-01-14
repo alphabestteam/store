@@ -4,9 +4,10 @@
     <div class="shape shape2"></div>
     <div class="login login__form">
       <div class="container cont__login">
+        
        <input type="text"  class="email input" value="" name="text" placeholder="Username" [(ngModel)]="this.username" >
-       <input type="password" class="password input" name="password" placeholder = "Password">
-       <button class="btn btn__login" (click)="login(username)" >login</button>
+       <input type="password" class="password input" name="password" placeholder = "Password" [(ngModel)]="this.password">
+       <button class="btn btn__login" (click)="login(username,password)" >login</button>
       </div>           
       </div>
       <!--

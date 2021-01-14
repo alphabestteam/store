@@ -10,10 +10,11 @@
           </div>            -->
          <div class="register login__form">
            <div class="container">
-             <input type="text" class="email input" name="email" placeholder="Email Address" >
-             <input type="password" class="password input" name="password" placeholder = "Password">
-             <input type="password" class="password pwtwo input" name="pwrepeat" placeholder = "Repeat Password">
-             <input type="submit" class="btn btn__register">
+
+             <input type="text" class="email input" name="email" placeholder="User name" [(ngModel)]="this.email">
+             <input type="password" class="password input" name="password" placeholder = "Password" [(ngModel)]="this.password">
+             <input type="password" class="password pwtwo input" name="pwrepeat" placeholder = "Repeat Password" [(ngModel)]="this.pwrepeat">
+             <button (click)="register(email,password,pwrepeat)" class="btn btn__register"></button>
              <button class="btn btn__login" routerLink="/login">Return to login</button>
            </div>
           

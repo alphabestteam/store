@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { RestApiService } from 'src/service/rest-api.service';
 
 @Component({
     selector: 'app-login',
@@ -9,14 +10,12 @@ import { Router } from '@angular/router';
 
   export class LoginPageComponent implements OnInit{
     username:string=""
-    constructor(private router:Router){}
+    constructor(private router:Router , private restlogin:RestApiService){}
     ngOnInit(): void {
     }
-    login(text){
-        if(text==="יגל"){
-           this.router.navigate(["/header"])
-        }
-        else{return false}
+    login(username,password){
+      console.log("loginpage")
+      this.restlogin.login({username:username,password:password}).subscribe
     }
     register(){
            this.router.navigate(["/register"])

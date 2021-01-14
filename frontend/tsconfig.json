@@ -18,5 +18,11 @@
       "es2018",
       "dom"
     ]
+  },
+  "proxy": {
+    "/api": {
+      "target" : "http://localhost:4200",
+      "secure": false
+    }
   }
 }
